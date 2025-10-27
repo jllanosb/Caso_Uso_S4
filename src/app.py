@@ -18,7 +18,7 @@ print(f'El archivo cuenta con {porc_target} de artistas que pertenecen al top 10
 
 # Guardar el porcentaje final
 fecha = datetime.now().strftime('%Y%m%d_%H%M%S')
-filename = f'/workspaces/Caso_Uso_S4/data/OutPut/OutputFinal_{fecha}.csv'
+filename = f'/workspaces/Caso_Uso_S4/data/output/OutputFinal_{fecha}.csv'
 df['top'].value_counts(1).to_csv(filename,
                                  sep='|',
                                  index=False)
