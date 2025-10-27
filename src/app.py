@@ -3,7 +3,8 @@ import numpy as np
 from datetime import datetime
 
 # lectura de archivo de data
-df = pd.read_csv('/workspaces/Caso_Uso_S4/data/process/DataSet.csv',sep='|')
+#df = pd.read_csv('/workspaces/Caso_Uso_S4/data/process/DataSet.csv',sep='|')
+df = pd.read_csv('D:/bigdata/Caso_Uso_S4/data/process/DataSet.csv',sep='|')
 
 # guardar cantidad de filas y columnas
 filas = df.shape[0]
@@ -18,7 +19,7 @@ print(f'El archivo cuenta con {porc_target} de artistas que pertenecen al top 10
 
 # Guardar el porcentaje final
 fecha = datetime.now().strftime('%Y%m%d_%H%M%S')
-filename = f'/workspaces/Caso_Uso_S4/data/output/OutputFinal_{fecha}.csv'
+filename = f'D:/bigdata/Caso_Uso_S4/data/output/OutputFinal_{fecha}.csv'
 df['top'].value_counts(1).to_csv(filename,
                                  sep='|',
                                  index=False)
